@@ -67,9 +67,17 @@ import Footer from './components/Footer';
 import CategoryPage from './pages/CategoryPage';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import About from './pages/About'; // ✅ Import About page
+import Blog from './pages/Blog'; // ✅ Import Blog page
+import BlogDetail from './pages/BlogDetail';
+import WomenPage from './pages/WomenPage';
+import Contact from './pages/Contact';
+import JewelryPage from './pages/Jewelry';
 import { CartProvider } from './context/CartContext';
 import { ToastProvider } from './context/ToastContext';
 import { AuthProvider } from './context/AuthContext'; // ✅ Import AuthProvider
+
+
 
 const App = () => {
   return (
@@ -102,6 +110,12 @@ const App = () => {
                 <Route path="/shop/:categoryName" element={<CategoryPage />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
+                <Route path="/about" element={<About />} /> {/* ✅ Add About route */}
+                <Route path="/blog" element={<Blog />} /> {/* ✅ Add Blog route */}
+                <Route path="/blog/:id" element={<BlogDetail />} /> {/* ✅ Add BlogDetail route */}
+                <Route path ="/jewelry" element={<JewelryPage />} /> {/* ✅ Add Jewelry route */}
+                <Route path="/contact" element={<Contact />} /> {/* ✅ Add Contact route */}  
+                {/* Add other routes as needed */}
               </Routes>
             </main>
             <Footer />
